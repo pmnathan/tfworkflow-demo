@@ -33,8 +33,8 @@ module "vote_service_sg" {
   ingress_rules            = ["https-443-tcp"]
   ingress_with_cidr_blocks = [
     {
-      from_port   = 8080
-      to_port     = 8090
+      from_port   = 22
+      to_port     = 22
       protocol    = "tcp"
       description = "User-service ports"
       cidr_blocks = "10.10.0.0/16"
