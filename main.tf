@@ -37,11 +37,11 @@ module "vote_service_sg" {
       to_port     = 22
       protocol    = "tcp"
       description = "User-service ports"
-      cidr_blocks = "10.10.0.0/16"
+      cidr_blocks = "0.0.0.0/0"
     },
     {
       rule        = "postgresql-tcp"
-      cidr_blocks = "10.10.0.0/16"
+      cidr_blocks = "0.0.0.0/0
     },
   ]
 }
