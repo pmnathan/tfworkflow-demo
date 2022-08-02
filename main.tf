@@ -33,15 +33,15 @@ module "vote_service_sg" {
   ingress_rules            = ["https-443-tcp"]
   ingress_with_cidr_blocks = [
     {
-      from_port   = 22
-      to_port     = 22
+      from_port   = 443
+      to_port     = 443
       protocol    = "tcp"
       description = "User-service ports"
-      cidr_blocks = "0.0.0.0/0"
+      cidr_blocks = "10.10.0.0/16"
     },
     {
       rule        = "postgresql-tcp"
-      cidr_blocks = "0.0.0.0/0"
+      cidr_blocks = "10.10.0.0/16"
     },
   ]
 }
