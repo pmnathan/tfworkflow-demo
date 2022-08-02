@@ -41,7 +41,7 @@ module "vote_service_sg" {
     },
     {
       rule        = "postgresql-tcp"
-      cidr_blocks = "0.0.0.0/0
+      cidr_blocks = "0.0.0.0/0"
     },
   ]
 }
